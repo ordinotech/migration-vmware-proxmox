@@ -25,7 +25,6 @@ Le hic, c'est que je n'étais pas chez moi. Tout devait passer par Tailscale, et
 - [9. Mes données sont-elles toujours là ?](#9-mes-données-sont-elles-toujours-là-)
 - [10. Ranger derrière soi](#10-ranger-derrière-soi)
 - [Les accrocs, en vrac](#les-accrocs-en-vrac)
-- [Checklist](#checklist)
 
 ## Ce que j'avais, ce que je visais
 
@@ -298,26 +297,5 @@ Et c'est seulement après que je pourrai supprimer les VM d'origine sur mon PC. 
 | VM 200 importée sans l'option UEFI | `qm set` lancé sans `--bios ovmf` | Pas de réimport, il a suffi de relancer `qm set 200 --bios ovmf --efidisk0 ...` |
 | Aucune ligne `unused` sur la VM 200 | Normal, le disque était déjà branché en `sata0` | Rien |
 | Fenêtre "VMware Tools unrecoverable error" | Les Tools tournent encore sans hyperviseur VMware | Désinstallation, puis pilotes VirtIO et agent QEMU |
-
-## Checklist
-
-- [ ] VM éteintes proprement, snapshots supprimés
-- [ ] Assez de place sur `/` et sur `local-lvm`
-- [ ] Tous les `.vmdk` copiés dans un dossier par VM, tailles identiques
-- [ ] `qm importdisk` terminé à 100 %
-- [ ] `bios: ovmf`, `efidisk0`, `sata0` et `boot: order=sata0` dans `qm config`
-- [ ] VM démarrée, comptes et données vérifiés
-- [ ] VMware Tools désinstallé, pilotes VirtIO et agent QEMU installés
-- [ ] Fichiers temporaires supprimés de `/var/tmp`
-- [ ] Anciennes VM gardées jusqu'à validation complète
-
-## Structure du repo
-
-```text
-.
-├── README.md
-└── docs/
-    └── images/   (15 captures numérotées)
-```
 
 Ce guide raconte ma démarche, sans garantie. Faites une sauvegarde avant de toucher à quoi que ce soit.
