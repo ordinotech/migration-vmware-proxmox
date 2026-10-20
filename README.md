@@ -265,6 +265,8 @@ Dans la foulée, remplacer par les outils côté Proxmox. Monter l'ISO des [pilo
 ```bash
 qm set 200 --agent enabled=1
 ```
+<img width="1435" height="855" alt="image" src="https://github.com/user-attachments/assets/ff659912-a98a-4ebf-aea9-a67fd7bb7524" />
+
 
 Il faut un arrêt complet suivi d'un démarrage pour que l'option soit prise en compte. Le même traitement vaut pour Client1.
 
